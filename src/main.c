@@ -6,17 +6,17 @@
 # pragma comment(lib, "h3-s.lib")
 #endif // !NDEBUG
 
-int state;
-state = 1;
 
 int main(int argc, char** argv)
 {
-	if (state = 1) {
-		H3Handle screen_cam = H3_Init((SH3InitParams) {
+	H3Handle scene1 = H3_Scene_Create(H3Handle h3, bool physicsLocksRotation);
+
+		H3Handle h3 = H3_Init((SH3InitParams) {
 			.fullscreen = false,
 				.height = 500,
 				.width = 500,
 		});
-	};
+
+	while (H3Handle h3, scene1);
 	return 0;
 }
