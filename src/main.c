@@ -15,7 +15,7 @@ int main(int argc, char** argv)
 				.height = 500,
 				.width = 500,
 		});
-	H3Handle scene = H3_Scene_Create(h3, true);
+	H3Handle scene = H3_Scene_Create(h3, false);
 	while (h3, scene);
 	return 0;
 }
