@@ -11,7 +11,7 @@ state = 1;
 
 int main(int argc, char** argv)
 {
-	while (state = 1) {
+	if (state = 1) {
 		H3Handle screen_cam = H3_Init((SH3InitParams) {
 			.fullscreen = false,
 				.height = 500,
