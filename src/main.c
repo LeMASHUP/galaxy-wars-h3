@@ -17,6 +17,10 @@ int main(int argc, char** argv)
 			.windowTitle = "Galaxy Wars H3 Engine"
 		});
 	H3Handle scene = H3_Scene_Create(h3, false);
+	H3Handle player = H3_Object_Create(scene,"player", NULL");
+
+	H3_Object_AddComponent(player, SPRITECOMPONENT_CREATE("assets\player\player.png") component);
+
 	while (h3, scene);
 	return 0;
 }
