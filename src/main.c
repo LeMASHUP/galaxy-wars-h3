@@ -21,12 +21,12 @@ int main(int argc, char** argv)
 	H3Handle player = H3_Object_Create(scene,"player", NULL);
 
 	H3_Object_AddComponent(player, SPRITECOMPONENT_CREATE("assets/Player.png", 0x22));
-	H3_Object_SetScale(player, 0.9);
-	H3_Object_GetEnabled(player);
-	H3_Object_SetEnabled(player, true);
-	
+	H3_Object_SetRenderOrder(player, 1);
 
 
-	while (h3, scene);
+	while (H3_DoFrame(h3, scene)) {
+
+
+	}
 	return 0;
 }
