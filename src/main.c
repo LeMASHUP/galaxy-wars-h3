@@ -11,14 +11,14 @@
 int main(int argc, char** argv)
 {
 
-		H3Handle h3 = H3_Init((SH3InitParams) {
-			.fullscreen = false,
-			.height = 800,
-			.width = 800,
+	H3Handle h3 = H3_Init((SH3InitParams) {
+		.fullscreen = false,
+			.height = 500,
+			.width = 500,
 			.windowTitle = "Galaxy Wars H3 Engine"
-		});
+	});
 	H3Handle scene = H3_Scene_Create(h3, false);
-	H3Handle player = H3_Object_Create(scene,"player", NULL);
+	H3Handle player = H3_Object_Create(scene, "player", NULL);
 
 	H3_Object_AddComponent(player, SPRITECOMPONENT_CREATE("assets/Player.png", 0x22));
 	H3_Object_SetRenderOrder(player, 1);
