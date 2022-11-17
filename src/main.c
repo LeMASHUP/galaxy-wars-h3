@@ -59,7 +59,7 @@ int main(int argc, char** argv)
 
 
 		if (H3_Input_IsMouseBtnDown(MB_Right)) {
-			H3_Object_AddVelocity(player, dx / 50, dy / 50);
+			H3_Object_AddVelocity(player, dx / 45, dy / 45);
 		}
 		else {
 			H3_Object_GetVelocity(player, &px, &py);
