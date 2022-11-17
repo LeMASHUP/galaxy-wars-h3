@@ -19,7 +19,7 @@ int main(int argc, char** argv)
 {
 	width = 1280;
 	height = 720;
-	angle = 50;
+	angle = 25;
 	
 
 	H3Handle h3 = H3_Init((SH3InitParams) {
