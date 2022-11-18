@@ -26,6 +26,9 @@ int main(int argc, char** argv)
 {
 	width = 1280;
 	height = 720;
+
+	char bullet_name[15];
+	int index_bullet = 0;
 	
 	
 
@@ -66,6 +69,17 @@ int main(int argc, char** argv)
 			H3_Object_SetVelocity(player, px*0.985,py*0.985);
 		};
 
+		if (H3_Input_IsMouseBtnPressed(MB_Left)) {
+			//création de la flamme
+			snprintf(bullet_name, 15, "%d", index_bullet++);
+			H3Handle bullet = H3_Object_Create(scene, bullet_name, NULL);
+			H3_Object_EnablePhysics(bullet, H3_BOX_COLLIDER(CDT_Dynamic, 25, 10, 0x22, false));
+			H3_Object_Translate(bullet, playerx, playery + 30);
+			H3_Object_SetVelocity(bullet, dx/20,dy/20);
+			H3_Object_SetRenderOrder(bullet, 1);
+			H3_Object_AddComponent(bullet, SPRITECOMPONENT_CREATE("../bin/assets/flamme.png", A_Center));
+		}
+			
 
 
 
